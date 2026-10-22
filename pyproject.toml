@@ -1,0 +1,17 @@
+[project]
+name = "auth0-diagnostics-mcp"
+version = "0.1.1"
+description = "MCP server exposing Auth0 developer tools for Claude"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0",
+    "starlette>=0.40",
+    "uvicorn[standard]>=0.30",
+    "httpx>=0.27",
+    "PyJWT>=2.8",
+    "cryptography>=41.0",
+]
+
+[project.scripts]
+auth0-diagnostics-mcp = "auth0_diagnostics_mcp.server:main"
