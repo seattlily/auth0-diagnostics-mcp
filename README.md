@@ -4,6 +4,10 @@ Auth0 developer tools for Claude Code and any MCP-compatible AI assistant.
 
 Decode JWTs, diagnose OAuth errors, validate tokens, and look up the right Auth0 flow — all without leaving your chat.
 
+> **Not affiliated with or endorsed by Auth0 or Okta.** This is a community tool.
+
+> **Token safety:** Only paste expired or test-tenant tokens. Never paste client secrets or Management API tokens — anything you paste into a chat is sent to the AI provider. If a real token is exposed, revoke it immediately.
+
 ## Installation
 
 Add this to `~/.claude/settings.json`:
@@ -13,7 +17,7 @@ Add this to `~/.claude/settings.json`:
   "mcpServers": {
     "auth0-local": {
       "command": "uvx",
-      "args": ["auth0-diagnostics-mcp"]
+      "args": ["auth0-diagnostics-mcp==0.1.2"]
     }
   }
 }
